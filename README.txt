@@ -13,8 +13,7 @@ Configuration
 -------------
 1. Create a label format: <your site name>/civicrm/admin/labelFormats?reset=1
 2. Create membership cover letter: <your site name>/civicrm/admin/messageTemplates?reset=1
-3. Create a relationship type and update membership type to define inheritance. This is an optional step and
-   can be skipped if you don't have membership inherited via relationship.
+3. Create a relationship type and update membership type to define inheritance. This is an optional step and can be skipped if you don't have membership inherited via relationship.
 
 Once you done above update the values for the constants defined in CRM/Membershipcard/BAO/Card.php
 - RELATIONSHIP_TYPE_FOR_INHERITANCE
