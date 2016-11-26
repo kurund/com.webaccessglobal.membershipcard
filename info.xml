@@ -2,16 +2,16 @@
 <extension key="com.webaccessglobal.membershipcard" type="module">
   <file>membershipcard</file>
   <name>Print Membership Cards</name>
-  <description>This extension adds action to print membership cards</description>
+  <description>This extension adds action to generate membership cards</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Kurund Jalmi</author>
     <email>kurund@wapix.co</email>
   </maintainer>
   <urls>
-    <url desc="Main Extension Page">http://FIXME</url>
-    <url desc="Documentation">http://FIXME</url>
-    <url desc="Support">http://FIXME</url>
+    <url desc="Main Extension Page">https://github.com/kurund/com.webaccessglobal.membershipcard</url>
+    <url desc="Documentation">https://github.com/kurund/com.webaccessglobal.membershipcard/blob/master/README.txt</url>
+    <url desc="Support">https://github.com/kurund/com.webaccessglobal.membershipcard/issues</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
   <releaseDate>2016-11-21</releaseDate>
