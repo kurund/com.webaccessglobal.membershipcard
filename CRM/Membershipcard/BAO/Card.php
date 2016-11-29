@@ -203,6 +203,9 @@ class CRM_Membershipcard_BAO_Card {
           'other_membership_end_date' => CRM_Utils_Date::customformat($membership['end_date'], '%m/%d/%Y'),
         );
       }
+      else {
+        $otherMemberInfo = array('other_first_name' => 'VOID');
+      }
 
       // add primary and other contact information
       $rows[] = array_merge($primaryContact, $otherMemberInfo);
