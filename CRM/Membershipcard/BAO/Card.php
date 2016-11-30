@@ -75,6 +75,7 @@ class CRM_Membershipcard_BAO_Card {
     $this->pdf->setPrintHeader(FALSE);
     $this->pdf->setPrintFooter(FALSE);
     $this->pdf->SetGenerator($this, "labelCreator");
+    $this->pdf->SetDisplayMode(100);
 
     // this is very useful for debugging, by default set to FALSE
     if ($this->debug) {
@@ -114,17 +115,17 @@ class CRM_Membershipcard_BAO_Card {
    * @param $formattedRow
    */
   public function labelCreator($formattedRow) {
-    $this->pdf->SetFont('helvetica', '', '8');
-    $this->pdf->writeHTMLCell(115, 140, 20, 50, $formattedRow['values']['message']);
+    $this->pdf->SetFont('helvetica', '', '10');
+    $this->pdf->writeHTMLCell(115, 140, 15, 50, $formattedRow['values']['message']);
 
     $this->pdf->SetFont('helvetica', '', '12');
-    $this->pdf->writeHTMLCell(80, 7, 21, 243, $formattedRow['values']['primary_first_name'] . ' ' . $formattedRow['values']['primary_last_name']);
-    $this->pdf->writeHTMLCell(27, 7, 21, 253, $formattedRow['values']['primary_membership_id']);
-    $this->pdf->writeHTMLCell(30, 7, 65, 253, $formattedRow['values']['membership_end_date']);
+    $this->pdf->writeHTMLCell(80, 7, 19, 253, $formattedRow['values']['primary_first_name'] . ' ' . $formattedRow['values']['primary_last_name']);
+    $this->pdf->writeHTMLCell(27, 7, 19, 262, $formattedRow['values']['primary_membership_id']);
+    $this->pdf->writeHTMLCell(30, 7, 65, 262, $formattedRow['values']['membership_end_date']);
 
-    $this->pdf->writeHTMLCell(80, 7, 121, 243, $formattedRow['values']['other_first_name'] . ' ' . $formattedRow['values']['other_last_name']);
-    $this->pdf->writeHTMLCell(27, 7, 121, 253, $formattedRow['values']['other_membership_id']);
-    $this->pdf->writeHTMLCell(30, 7, 164, 253, $formattedRow['values']['other_membership_end_date']);
+    $this->pdf->writeHTMLCell(80, 7, 119, 253, $formattedRow['values']['other_first_name'] . ' ' . $formattedRow['values']['other_last_name']);
+    $this->pdf->writeHTMLCell(27, 7, 119, 262, $formattedRow['values']['other_membership_id']);
+    $this->pdf->writeHTMLCell(30, 7, 164, 262, $formattedRow['values']['other_membership_end_date']);
   }
 
   /**
